@@ -15,9 +15,9 @@
           {{ $t("MyServers.Title") }}
           <v-spacer />
           <v-btn
+            v-if="user.id != null && IsAnyAdmin(user)"
             color="primary"
             @click="newDialog = true"
-            v-if="user.id != null"
           >
             {{ $t("MyServers.New") }}
           </v-btn>

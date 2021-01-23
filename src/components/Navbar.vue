@@ -3,7 +3,7 @@
     <v-system-bar color="primary darken-3"></v-system-bar>
     <v-app-bar app color="primary" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>{{ $t("Navbar.title") }}</v-toolbar-title>
+      <v-toolbar-title>ICL Get5 Web Panel</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn rounded href="/api/auth/steam" v-if="user.id == null">
         <img src="/img/login_small.png" v-if="user.id == null" />
