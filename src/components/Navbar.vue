@@ -47,7 +47,7 @@
           </v-list-item>
 
           <v-list-item
-            v-if="user.id != null"
+            v-if="user.id != null && IsAnyAdmin(user)"
             index="match_create"
             :to="'/match/create'"
           >
@@ -72,7 +72,7 @@
             <v-list-item-title>{{ $t("Navbar.MyServers") }}</v-list-item-title>
           </v-list-item>
 
-          <v-list-item v-if="user.id != null" @click="newDialog = true">
+          <v-list-item v-if="user.id != null && IsAnyAdmin(user)" @click="newDialog = true">
             <v-list-item-title>{{ $t("Navbar.AddServer") }}</v-list-item-title>
           </v-list-item>
 
@@ -96,6 +96,7 @@
   </v-card>
 </template>
 <script>
+/* eslint-disable */
 import ServerDialog from "./ServerDialog";
 export default {
   name: "Navbar",

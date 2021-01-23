@@ -18,7 +18,7 @@
           <v-btn
             color="primary"
             @click="newDialog = true"
-            v-if="user.id != null"
+            v-if="user.id != null && IsAnyAdmin(user)"
           >
             {{ $t("Seasons.New") }}
           </v-btn>
